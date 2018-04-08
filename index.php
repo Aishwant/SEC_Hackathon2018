@@ -7,7 +7,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="HP1.php">
+  <a class="navbar-brand" href="#">
     <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
     Ole Miss Cybersecurity Challange
   </a>
