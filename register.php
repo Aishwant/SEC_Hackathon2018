@@ -12,19 +12,19 @@
         <?php include('errors.php');?>
         <h1>Registration Form</h1>
          <div class="input-group">
-         <label for="username">Username</label>
+         <label for="username">Username:</label>
          <input type="text" name="username" placeholder="e.g. Molly666">
          </div>
          <div class="input-group">
-         <label for="email">Email</label>
+         <label for="email">Email:</label>
          <input type="text" name="email" placeholder="e.g. Molly666@gmail.com">
          </div>
          <div class="input-group">
-         <label for="password">Password</label>
+         <label for="password">Password:</label>
          <input type="text" name="password" placeholder="Password">
          </div>
          <div class="input-group">
-         <label for="confirm">Confirm Password</label>
+         <label for="confirm">Confirm Password:</label>
          <input type="text" name="confirm" placeholder="Confirm password">
          </div>
          <div id='sub' class="input-group">
