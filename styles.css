@@ -71,3 +71,7 @@ textarea {
 #sub {
     text-align: center;
 }
+
+.error {
+    color: #FF0000;
+}
