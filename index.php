@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="HP1.php">
-    <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+<nav class='navbar navbar-expand-sm bg-primary navbar-dark'>
+  <a class="navbar-brand" href="index.php">
+    <img src="logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
     Ole Miss Cybersecurity Challange
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,15 +25,17 @@
 	<a href="login.php">Login</a>
 	<a href="register.php">Register</a>
 	<a href="logout.php">Logout</a>
-	
     </span>
   </div>
 </nav>
 
 <br />
 <h1 align="center">Welcome to RebelBanking</h1>
-
-
+<br />
+<br />
+<h2 align="center">Presentation Slides</h2>
+<p align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSb3YMYy8y1IIAu3x67QwVVCNxJP6hcO4Cj74QyLVNfkfOzMk9jpV_cEWCcZvejFjDZyERY9qvZ3zcL/embed?start=true&loop=false&delayms=30000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</p>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
