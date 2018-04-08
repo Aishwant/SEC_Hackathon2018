@@ -1,0 +1,11 @@
+git clone <url of repository>
+
+git status
+
+git add *
+
+git commit -m '<Description>'
+
+git pull origin master
+
+git push origin master
