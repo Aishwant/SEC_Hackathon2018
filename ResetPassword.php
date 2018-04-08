@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-    <title>Password Rest</title>
+    <title>Password Reset</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
   </head>
