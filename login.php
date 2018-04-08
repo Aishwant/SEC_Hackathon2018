@@ -23,6 +23,9 @@
          </div>
          <p>Not a Member? 
              <a href ="register.php"> Register Here</a>
+         </p>
+         <p>Forgot password? 
+             <a href ="register.php"> Reset password here.</a>
          </p>         
 		 <table width="100%" align="center">
 		 <tr>
