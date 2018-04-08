@@ -34,7 +34,7 @@
              <a href ="login.php"> Sign In </a>
          </p>
          <p>Forgot Password
-             <a href="ResetPassword.html">Reset Password<a>
+             <a href="ResetPassword.php">Reset Password<a>
          </p>
   
 
