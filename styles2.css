@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 h1 {
     text-align: center;
 }
 
 form {
-    background: red;
+    background: #14D2F1;
     margin: 0px auto;
     padding: 20px;
     margin: 0px auto;
@@ -18,52 +17,8 @@ form {
     padding: 5px;
     font-size: 20px;
     color: black;
-    border-radius: 5px;
-	text-align:center;
-	border: solid;
+    border: solid;
     border-color: #212529;
-}
-
-.btn:hover {
-    background-color: lightgrey;
-}
-
-.input-group {
-    margin: 10px 0px 10px 0px;
-}
-
-.input-group label {
-    display: block;
-    align-content: left;
-    margin: 3px;
-}
-
-.input-group input {
-    height: 25px;
-    width: 95%;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 16px;
-=======
-h1 {
-    text-align: center;
-}
-
-form {
-    background: red;
-    margin: 0px auto;
-    padding: 20px;
-    margin: 0px auto;
-    border: 5px solid navy;
-    width: 30%;
-    border-radius: 30px;
-
-}
-
-.btn {
-    padding: 10px;
-    font-size: 20px;
-    color: black;
     border-radius: 5px;
 }
 
@@ -87,5 +42,4 @@ form {
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 16px;
->>>>>>> 7acee3836a87ff97d59c1a154b4930f7b20f2f01
 }
