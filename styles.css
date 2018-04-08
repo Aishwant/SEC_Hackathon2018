@@ -1,20 +1,43 @@
-body {
-    background-color: #F53A12;
+h1 {
+    text-align: center;
 }
 
 form {
-font-size: 25px;
-font-family: 'Jua', sans-serif;
+    background: red;
+    margin: 0px auto;
+    padding: 20px;
+    margin: 0px auto;
+    border: 5px solid navy;
+    width: 30%;
+    border-radius: 30px;
+
 }
 
-div.container {
-    height: 10em;
-    position: relative }
-div.container4 {
-    margin: 0;
-    background: yellow;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) }
+.btn {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: lightgrey;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+    display: block;
+    align-content: left;
+    margin: 3px;
+}
+
+.input-group input {
+    height: 25px;
+    width: 95%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
