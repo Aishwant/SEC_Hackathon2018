@@ -21,7 +21,7 @@
           <label>Confirm new password</label>
           <input class='confirm-new-password' placeholder='Re-Enter Password'><br>
         </div>
-        <div class='input-group'>
+        <div id='sub' class='input-group'>
             <button type='submit' class='btn'>Submit</button>
         </div>
     </form>
