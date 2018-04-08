@@ -3,7 +3,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="favicon.ico">
         <title>Forgot Password</title>
     </head>

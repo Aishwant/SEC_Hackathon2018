@@ -3,10 +3,11 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="favicon.ico">
         <title>Welcome</title>
     </head>
+
     <body>
         <form id='sub' method="post" action="login.php">
         <?php include('errors.php');?>
@@ -18,8 +19,6 @@
         <p>
             <a href ="register.php"> Sign up </a>
         </p>
-        
-  
 
         </form>
     </body>
