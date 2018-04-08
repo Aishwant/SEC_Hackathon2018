@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-
+<?php
+    if($_SERVER['REQUEST_METHOD'] === 'post'){
+        if(isset($_SERVER['username']) && !isEmpty($_SERVER['username']))
+            echo 'yay';
+        // else
+        //     echo '<h1>Please complete all the fields</h1>';
+    }
+?>
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
@@ -8,8 +15,7 @@
         <title>Register</title>
     </head>
     <body>
-        <form method="post" action="login.php">
-        <?php include('errors.php');?>
+        <form method="post" action="">
         <h1>Registration Form</h1>
          <div class="input-group">
          <label for="username">Username:</label>
@@ -36,8 +42,6 @@
          <p>Forgot Password
              <a href="ResetPassword.php">Reset Password<a>
          </p>
-  
-
         </form>
     </body>
 </html>
