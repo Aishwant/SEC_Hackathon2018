@@ -12,6 +12,7 @@
   <body>
     <form>
         <?php include('s.php');?>
+        <h1>Password Rest</h1>
         <div class='input-group'>
           <label>New Password: </label>
           <input class='new-password' placeholder='Enter Password'><br>
@@ -21,10 +22,8 @@
           <input class='confirm-new-password' placeholder='Re-Enter Password'><br>
         </div>
         <div class='input-group'>
-          <div id='lower'>
-            <input type='submit' class='submit' value='submit'>
-          </div>
-        <div>
+            <button type='submit' class='btn'>Submit</button>
+        </div>
     </form>
   </body>
   </div>
