@@ -1,5 +1,5 @@
-<?php include('server.php')?>
 <!DOCTYPE html>
+<?php include('server.php')?>
 <?php
     if($_SERVER['REQUEST_METHOD'] === 'post'){
         if(isset($_SERVER['username']) && !isEmpty($_SERVER['username']))
