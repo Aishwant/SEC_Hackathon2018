@@ -20,11 +20,11 @@
         <h1>Registration Form</h1>
          <div class="input-group">
          <label for="username">Username:</label>
-         <input type="text" name="username" placeholder="e.g. Molly666">
+         <input type="text" name="username" placeholder="e.g. Molly13">
          </div>
          <div class="input-group">
          <label for="email">Email:</label>
-         <input type="text" name="email" placeholder="e.g. Molly666@gmail.com">
+         <input type="text" name="email" placeholder="e.g. Molly13@gmail.com">
          </div>
          <div class="input-group">
          <label for="password">Password:</label>

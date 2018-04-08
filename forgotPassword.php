@@ -13,7 +13,7 @@
         <h1>Request password reset</h1>
          <div class="input-group">
          <label for="email">Email:</label>
-         <input type="text" name="email" placeholder="e.g. Molly666@gmail.com">
+         <input type="text" name="email" placeholder="e.g. Molly13@gmail.com">
          <div id='sub' class="input-group">
          <button type="submit" name="submit" class="btn">submit</button>
          </div>

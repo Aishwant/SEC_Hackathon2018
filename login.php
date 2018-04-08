@@ -15,7 +15,7 @@
     <h1 align="center">Login</h1>
 	     <div class="input-group">
            <label for="username">Username:</label>
-           <input type="text" name="username" placeholder="e.g. Molly666">
+           <input type="text" name="username" placeholder="e.g. Molly13">
          </div>
          <div class="input-group">
            <label for="password">Password:</label>
