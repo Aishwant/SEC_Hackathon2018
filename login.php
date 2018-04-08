@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.ico">
+        <title>Login</title>
+    </head>
 <body>
 
-<h1 align="center">Please enter your login information:</h1>
-
 <form action="mainmenu.php" method="POST">
-	<table id="logintable" align="center" border="0" style="border-collapse">
-			<tr>
-				<td class="lt1" align="right">User Name:</td>
-				<td class="lt1" align="center"><input type="text" name="uname" size="8"></td>
-			</tr>
-			<tr>
-				<td class="lt1" align="right">Password:</td>
-				<td class="lt1" align="center"><input type="text" name="password" size="8"></td>
-			</tr>
-			<tr>
-				<td class="lt1" align="right"><input type='button' value='Cancel' onclick="window.location.href='index.php'" /></td>
-				<td class="lt1" align="left"><input type="submit" value="Submit" name="b1"></td>
-			</tr>	
-		</table>
+<h1 align="center">Login</h1>
+	     <div class="input-group">
+           <label for="username">Username</label>
+           <input type="text" name="username" placeholder="e.g. Molly666">
+         </div>
+         <div class="input-group">
+           <label for="password">Password</label>
+           <input type="text" name="password" placeholder="Password">
+         </div>
+         <div class="input-group">
+			<button type="submit" name="Submit" class="btn">Submit</button>
+			<button type="submit" name="Cancel" class="btn" onclick="window.location.href='index.php'" />Cancel</button>
+         </div>
+				
 </form> 
 </body>
 </html>

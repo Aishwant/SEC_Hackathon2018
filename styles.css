@@ -19,6 +19,7 @@ form {
     font-size: 20px;
     color: black;
     border-radius: 5px;
+	text-align:center;
 }
 
 .btn:hover {
