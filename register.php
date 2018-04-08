@@ -9,7 +9,7 @@
     </head>
     <body>
         <form method="post" action="register.php">
-        <?php include('s.php');?>
+        <?php include('errors.php');?>
         <h1>Registration Form</h1>
          <div class="input-group">
          <label for="username">Username</label>
@@ -33,6 +33,10 @@
          <p>Already a Member? 
              <a href ="login.php"> Sign In </a>
          </p>
+         <p>Forgot Password
+             <a href="ResetPassword.html">Reset Password<a>
+         </p>
+  
 
         </form>
     </body>
