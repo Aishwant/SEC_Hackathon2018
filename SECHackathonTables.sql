@@ -1,17 +1,41 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2018-04-08 03:16:20.054
+-- Last modification date: 2018-04-08 03:56:03.666
 
 -- tables
--- Table: Classification
-CREATE TABLE Classification (
-    CLI_ID varchar(9) NOT NULL,
-    SEX varchar(2) NOT NULL,
-    RACE varchar(2) NOT NULL,
-    HISPANIC varchar(2) NOT NULL,
-    MARITAL varchar(1) NOT NULL,
-    LEG_STATUS varchar(1) NOT NULL,
-    Client_SS_Num varchar(9) NOT NULL,
-    CONSTRAINT Classification_pk PRIMARY KEY (CLI_ID)
+
+-- Table: Login
+CREATE TABLE Login (
+    Username varchar(24) NOT NULL,
+    Password varchar(24) NULL,
+    Emp_ID varchar(10) NULL,
+    Employee_Emp_ID varchar(24) NOT NULL,
+    Administrator_Emp_ID varchar(24) NOT NULL,
+    CONSTRAINT Login_pk PRIMARY KEY (Username)
+);
+
+-- Table: Administrator
+CREATE TABLE Administrator (
+    Emp_ID varchar(24) NOT NULL,
+    First_Name varchar(24) NOT NULL,
+    Last_Name varchar(24) NOT NULL,
+    Login_Password varchar(24) NOT NULL,
+    Login_Username varchar(24) NOT NULL,
+    CONSTRAINT Administrator_pk PRIMARY KEY (Emp_ID)
+);
+
+-- Table: Employee
+CREATE TABLE Employee (
+    Emp_ID varchar(24) NOT NULL,
+    First_Name varchar(15) NOT NULL,
+    Last_Name varchar(15) NOT NULL,
+    Username varchar(15) NOT NULL,
+    Password varchar(15) NOT NULL,
+    FinancilProfessional_1 int NOT NULL,
+    FinancilProfessional_2 int NOT NULL,
+    FinancilProfessional_3 int NOT NULL,
+    Login_Username varchar(24) NOT NULL,
+    Login_Password varchar(24) NOT NULL,
+    CONSTRAINT Employee_pk PRIMARY KEY (Emp_ID)
 );
 
 -- Table: Client
@@ -27,17 +51,16 @@ CREATE TABLE Client (
     CONSTRAINT Client_pk PRIMARY KEY (SS_Num)
 );
 
--- Table: Employee
-CREATE TABLE Employee (
-    Emp_ID varchar(24) NOT NULL,
-    First_Name varchar(15) NOT NULL,
-    Last_Name varchar(15) NOT NULL,
-    Username varchar(15) NOT NULL,
-    FinancilProfessional_1 int NOT NULL,
-    FinancilProfessional_2 int NOT NULL,
-    FinancilProfessional_3 int NOT NULL,
-    Login_Username varchar(24) NOT NULL,
-    CONSTRAINT Employee_pk PRIMARY KEY (Emp_ID)
+-- Table: Classification
+CREATE TABLE Classification (
+    CLI_ID varchar(9) NOT NULL,
+    SEX varchar(2) NOT NULL,
+    RACE varchar(2) NOT NULL,
+    HISPANIC varchar(2) NOT NULL,
+    MARITAL varchar(1) NOT NULL,
+    LEG_STATUS varchar(1) NOT NULL,
+    Client_SS_Num varchar(9) NOT NULL,
+    CONSTRAINT Classification_pk PRIMARY KEY (CLI_ID)
 );
 
 -- Table: Financials
@@ -50,14 +73,6 @@ CREATE TABLE Financials (
     PAYMENT varchar(2) NULL,
     Classification_CLI_ID varchar(9) NOT NULL,
     CONSTRAINT Financials_pk PRIMARY KEY (ACC_Num)
-);
-
--- Table: Login
-CREATE TABLE Login (
-    Username varchar(24) NOT NULL,
-    Password varchar(24) NULL,
-    Emp_ID varchar(10) NULL,
-    CONSTRAINT Login_pk PRIMARY KEY (Username)
 );
 
 -- Table: Services
