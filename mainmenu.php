@@ -30,12 +30,7 @@ if(!$_SESSION['ValidUser']) {
 
 		while($row = $STH->fetch()) {
 			//session values set based on database fields
-			If($row['Active'] == true){
 			$_SESSION['ValidUser'] = true;
-			$_SESSION['Access'] = $row['URMLevel'];
-			$_SESSION['fname'] = $row['EFname'];
-			$_SESSION['lname'] = $row['ELname'];
-			$_SESSION['empid'] = $row['EmpID'];
 			$recordsFound = $recordsFound + 1;
 			}
 		}
@@ -43,7 +38,6 @@ if(!$_SESSION['ValidUser']) {
 		if($recordsFound == 0 ) {
 			echo "<html><script language='JavaScript'>alert('Invalid Login Information!'),history.go(-1)</script></html>";
 			header('Location: login.php');
-			
 		}
 	}
 	catch(PDOException $e)
