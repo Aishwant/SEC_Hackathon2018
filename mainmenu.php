@@ -18,8 +18,8 @@ if(!$_SESSION['ValidUser']) {
 		//compute the hashed version of the password the user entered
 		$LoginPassword = md5($tmpPW);
 		
-		$STH = $dbc->prepare('SELECT * from employees WHERE Email=:param_email AND EPassword=:param_password');
-		$STH->bindParam(':param_email', $tmpuser);
+		$STH = $dbc->prepare('SELECT Username, Password from Login WHERE Username=:param_user AND Password=:param_password');
+		$STH->bindParam(':param_user', $tmpuser);
 		$STH->bindParam(':param_password', $LoginPassword);	
 		 
 		//set the fetch mode
