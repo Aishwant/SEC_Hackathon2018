@@ -3,19 +3,12 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="icon" href="favicon.ico">
 </head>
 <body>
 
-<<<<<<< HEAD
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">
-    <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-=======
 <nav class='navbar navbar-expand-sm bg-primary navbar-dark'>
   <a class="navbar-brand" href="index.php">
     <img src="logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
->>>>>>> 45adda01883a529de413327eef52e9868f71bd72
     Ole Miss Cybersecurity Challange
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
