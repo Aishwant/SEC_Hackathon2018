@@ -27,7 +27,7 @@
          <label for="confirm">Confirm Password</label>
          <input type="text" name="confirm" placeholder="Confirm password">
          </div>
-         <div class="input-group">
+         <div id='sub' class="input-group">
          <button type="submit" name="register" class="btn">Register</button>
          </div>
          <p>Already a Member? 
