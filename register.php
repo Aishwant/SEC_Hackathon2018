@@ -40,7 +40,7 @@
          <p>Already a Member? 
              <a href ="login.php"> Sign In </a>
          </p>
-         <p>Forgot Password
+         <p>Forgot Password?
              <a href="forgotPassword.php">Reset Password<a>
          </p>
         </form>
