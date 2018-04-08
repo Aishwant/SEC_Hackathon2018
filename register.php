@@ -1,3 +1,4 @@
+<?php include('server.php')?>
 <!DOCTYPE html>
 <?php
     if($_SERVER['REQUEST_METHOD'] === 'post'){
