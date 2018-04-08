@@ -11,7 +11,7 @@
 <br />
 <br />
 <br />
-<form action="mainmenu.php" method="POST">
+<form action="index.php" method="POST">
     <h1 align="center">Login</h1>
 	     <div class="input-group">
            <label for="username">Username:</label>
@@ -21,7 +21,9 @@
            <label for="password">Password:</label>
            <input type="text" name="password" placeholder="Password">
          </div>
-         
+         <p>Not a Member? 
+             <a href ="register.php"> Register Here</a>
+         </p>         
 		 <table width="100%" align="center">
 		 <tr>
 		 <td align="center">
