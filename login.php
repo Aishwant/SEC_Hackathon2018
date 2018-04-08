@@ -2,7 +2,7 @@
 <html>
 <head>
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-        <link rel="stylesheet" href="styles2.css">
+        <link rel="stylesheet" href="css/styles2.css">
         <link rel="icon" href="favicon.ico">
         <title>Login</title>
     </head>
