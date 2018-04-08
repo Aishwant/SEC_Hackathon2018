@@ -2,7 +2,6 @@ html {
     font-family: 'Lucida Sans Regular'
 }
 
-
 h1 {
     text-align: center;
 }
@@ -22,10 +21,7 @@ form {
     padding: 5px;
     font-size: 20px;
     color: black;
-    border: solid;
-    border-color: #212529;
-    border-radius: 5px;
-}
+    border-radius: 5px;}
 
 .btn:hover {
     background-color: lightgrey;
