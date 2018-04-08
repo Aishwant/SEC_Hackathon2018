@@ -52,7 +52,7 @@ if (isset($_POST['register'])){
   }
 	//if there are no errors, save user to database 
 	if (count($errors)==0){
-		$password= md5($password_1);//encrypt password before storing in database (security )
+		$password= md5($password);//encrypt password before storing in database (security )
 		echo "INSERT INTO users (username,email,password,Type) VALUES ('$username','$email','$password','$type')";
 		$query="INSERT INTO users (username,email,password,Type) VALUES ('$username','$email','$password','$type')";
 		mysqli_query($db,$query);	
