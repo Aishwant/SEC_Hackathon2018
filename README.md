@@ -1,8 +1,9 @@
 # SEC_Hackathon2018
 
 ### connecting to your EC2 server
-<your_ubuntu_server>the server for now is ubuntu@ec2-18-188-103-173.us-east-2.compute.amazonaws.com
- 1. ssh -i <your.pem-file> <your_ubuntu_server>
+<your_ubuntu_server>the server for now is ubuntu@ec2-18-222-14-83.us-east-2.compute.amazonaws.com
+<your.pem-file> olemiss.pem
+ 1. ssh -i "<your.pem-file>" <your_ubuntu_server>
  
  ### to install apache server
  sudo su <br />
