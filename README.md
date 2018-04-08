@@ -22,6 +22,7 @@ service apache2 restart <br />
 <br />
 ### to connect myphpadmin to RDS
 nano /etc/phpmyadmin/config.inc.php <br />
+(just before authentication)
 --ADD LINES BELOW THE PMA CONFIG AREA AND FILL IN DETAILS-- <br />
 $i++; <br />
 $cfg['Servers'][$i]['host']          = '__FILL_IN_DETAILS__'; <br />
