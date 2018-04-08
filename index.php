@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+<nav class='navbar navbar-expand-sm bg-primary navbar-dark'>
+  <a class="navbar-brand" href="index.php">
+    <img src="logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
     Ole Miss Cybersecurity Challange
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,6 @@
 	<a href="login.php">Login</a>
 	<a href="register.php">Register</a>
 	<a href="logout.php">Logout</a>
-	
     </span>
   </div>
 </nav>
