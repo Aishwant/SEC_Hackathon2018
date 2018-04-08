@@ -14,7 +14,7 @@
         <?php include('s.php');?>
         <h1>Password Reset</h1>
         <div class='input-group'>
-          <label>New Password: </label>
+          <label>New Password</label>
           <input class='new-password' placeholder='Enter Password'><br>
         </div>
         <div class='input-group'>
