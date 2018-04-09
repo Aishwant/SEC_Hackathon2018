@@ -1,0 +1,26 @@
+The account to send emails to clients is:
+rebelbanking@gmail.com
+
+Send notifications when someone unauthorize (not your handler) changes your data:
+"Dear (cient name),
+We are sorry to let you know that there have been some unauthorized changes to your account. Our IT staff is monitoring the
+situation and have frozen all other assets until further notice.
+Please contact us at rebelbanking@gmail.com to discuss your account and our next course of action.
+We will analyze the events that led to this security breach, and will incorporate ways to circumvent future occurences into 
+our security procedures. At Rebel Banking, we take security seriously.
+Sincerely,
+Rebel Banking, Inc.
+1234 University Ave.
+Oxford, MS
+38555"
+
+Send notifications when the situation has been handled:
+"Dear (client name),
+We have handled the situation involving unauthorized changes to your account. Your data has been returned to its previous state.
+Again, we are terribly sorry for the inconvenience. Please let us know how you feel about your experience with Rebel Banking
+at rebelbanking@gmail.com.
+Sincerely,
+Rebel Banking, Inc.
+1234 University Ave.
+Oxford, MS
+38655"
