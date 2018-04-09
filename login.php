@@ -15,7 +15,13 @@
     <h1 align="center">Login</h1>
 	     <div class="input-group">
            <label for="username">Username:</label>
+<<<<<<< HEAD
            <input type="text" name="username" placeholder="e.g. DanTheMan">
+||||||| merged common ancestors
+           <input type="text" name="username" placeholder="e.g. Molly666">
+=======
+           <input type="text" name="username" placeholder="e.g. Molly13">
+>>>>>>> 8dc77dc304181f1c54bb26dcf4b76ddf6cc74936
          </div>
          <div class="input-group">
            <label for="password">Password:</label>

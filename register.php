@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 
+||||||| merged common ancestors
+<?php include('server.php')?>
+=======
+>>>>>>> 8dc77dc304181f1c54bb26dcf4b76ddf6cc74936
 <!DOCTYPE html>
+<?php include('server.php')?>
 <?php
     if(isset($_POST['register'])){
         if(isset($_POST['username']) && !Empty($_POST['username'])&&isset($_POST['email']) && !Empty($_POST['email'])&&isset($_POST['password']) && !Empty($_POST['password'])&&isset($_POST['confirm']) && !Empty($_POST['confirm']))
@@ -21,11 +27,23 @@
         <h1>Registration Form</h1>
          <div class="input-group">
          <label for="username">Username:</label>
+<<<<<<< HEAD
          <input type="text" name="username" placeholder="e.g. Molly">
+||||||| merged common ancestors
+         <input type="text" name="username" placeholder="e.g. Molly666">
+=======
+         <input type="text" name="username" placeholder="e.g. Molly13">
+>>>>>>> 8dc77dc304181f1c54bb26dcf4b76ddf6cc74936
          </div>
          <div class="input-group">
          <label for="email">Email:</label>
+<<<<<<< HEAD
          <input type="text" name="email" placeholder="e.g. Molly@gmail.com">
+||||||| merged common ancestors
+         <input type="text" name="email" placeholder="e.g. Molly666@gmail.com">
+=======
+         <input type="text" name="email" placeholder="e.g. Molly13@gmail.com">
+>>>>>>> 8dc77dc304181f1c54bb26dcf4b76ddf6cc74936
          </div>
          <div class="input-group">
          <label for="password">Password:</label>
@@ -41,7 +59,7 @@
          <p>Already a Member? 
              <a href ="login.php"> Sign In </a>
          </p>
-         <p>Forgot Password
+         <p>Forgot Password?
              <a href="forgotPassword.php">Reset Password<a>
          </p>
         </form>

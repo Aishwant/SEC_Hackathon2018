@@ -1,26 +1,22 @@
-Drop table if exists Financials, Classification, Clients, Employee, Login;
-
--- Table: Login
-CREATE TABLE Login (
-    Username varchar(24) NOT NULL,
-    PASSWORD varchar(24) NOT NULL,
-    Emp_ID varchar(24) NOT NULL,
-    Employee_Emp_ID varchar(24) NOT NULL,
-    CONSTRAINT Login_pk PRIMARY KEY (Username)
-);
+Drop table if exists Financials, Classification, Clients, Employee;
 
 -- Table: Employee
 CREATE TABLE Employee (
-    Emp_ID varchar(24) NOT NULL,
+    Username varchar(24) NOT NULL,
+    Passwords varchar(15) NOT NULL,
     First_Name varchar(15) NOT NULL,
     Last_Name varchar(15) NOT NULL,
-    Username varchar(15) NOT NULL,
-    Passwords varchar(15) NOT NULL,
     FinancilProfessional_1 bool NOT NULL,
     FinancilProfessional_2 bool NOT NULL,
     FinancilProfessional_3 bool NOT NULL,
-    Login_Username varchar(24) NOT NULL,
-    CONSTRAINT Employee_pk PRIMARY KEY (Emp_ID)
+    -- CONSTRAINT Employee_pk PRIMARY KEY (Emp_ID)
+    PRIMARY KEY (Username)
+);
+
+CREATE TABLE Composite(
+     Username varchar(24) NOT NULL,
+     SS_Num varchar(11) NOT NULL,
+     PRIMARY KEY (Username, SS_Num)
 );
 
 -- Table: Clients
@@ -29,11 +25,10 @@ CREATE TABLE Clients (
     LAST_NAME varchar(15) NOT NULL,
     FIRST_NAME varchar(15) NOT NULL,
     MAID_NAME varchar(15) NOT NULL,
-    BIRTH_DATE varchar(10) NOT NULL,
-    AGE varchar(3) NOT NULL,
+    BIRTH_DATE varchar(24) NOT NULL,
+    AGE varchar(2) NOT NULL,
     CLI_STATUS varchar(24) NOT NULL,
-    Employee_Emp_ID varchar(24) NOT NULL,
-    CONSTRAINT Clients_pk PRIMARY KEY (SS_Num)
+    PRIMARY KEY (SS_Num)
 );
 
 -- Table: Classification
@@ -44,7 +39,7 @@ CREATE TABLE Classification (
     MARITAL varchar(1) NOT NULL,
     LEG_STATUS bool NOT NULL,
     Clients_SS_Num varchar(11) NOT NULL,
-    CONSTRAINT Classification_pk PRIMARY KEY (CLI_ID)
+    PRIMARY KEY (CLI_ID)
 );
 
 -- Table: Financials
@@ -53,7 +48,7 @@ CREATE TABLE Financials (
     EMPLOYMENT bool NOT NULL,
     INCOME_SRC varchar(5) NOT NULL,
     Classification_CLI_ID varchar(9) NOT NULL,
-    CONSTRAINT Financials_pk PRIMARY KEY (ACC_Num)
+    PRIMARY KEY (ACC_Num)
 );
 
 
@@ -63,40 +58,27 @@ ALTER TABLE Classification ADD CONSTRAINT Classification_Clients FOREIGN KEY Cla
     REFERENCES Clients (SS_Num);
 
 -- Reference: Clients_Employee (table: Clients)
-ALTER TABLE Clients ADD CONSTRAINT Clients_Employee FOREIGN KEY Clients_Employee (Employee_Emp_ID)
-    REFERENCES Employee (Emp_ID);
+ALTER TABLE Composite ADD CONSTRAINT Clients_Composite FOREIGN KEY Clients_Composite (SS_Num)
+    REFERENCES Clients (SS_Num);
 
--- Reference: Employee_Login (table: Employee)
-ALTER TABLE Employee ADD CONSTRAINT Employee_Login FOREIGN KEY Employee_Login (Login_Username)
-    REFERENCES Login (Username);
 
 -- Reference: Financials_Classification (table: Financials)
 ALTER TABLE Financials ADD CONSTRAINT Financials_Classification FOREIGN KEY Financials_Classification (Classification_CLI_ID)
     REFERENCES Classification (CLI_ID);
-
--- Reference: Login_Employee (table: Login)
-ALTER TABLE Login ADD CONSTRAINT Login_Employee FOREIGN KEY Login_Employee (Employee_Emp_ID)
-    REFERENCES Employee (Emp_ID);
-
+    
+    ALTER TABLE Composite ADD CONSTRAINT Employee_Composite FOREIGN KEY Employee_Composite(Username)
+    REFERENCES Employee(Username);
 
 
-INSERT INTO Login VALUES('Amy1','OleMiss1!','01234');
-INSERT INTO Login VALUES('Adam2','OleMiss2!','12345');
-INSERT INTO Login VALUES('Emily3','OleMiss3!','23456');
-INSERT INTO Login VALUES('Everett4','OleMiss4!','34567');
-INSERT INTO Login VALUES('Elle5','OleMiss5!','45678');
-INSERT INTO Login VALUES('Eddy6','OleMiss6!','56789');
-INSERT INTO Login VALUES('Eric7','OleMiss7!','67890');
-INSERT INTO Login VALUES('Emma8','OleMiss8!','78901');
 
-INSERT INTO Employee VALUES('01234','Amy','Ashley','Amy1','OleMiss1!','False','False','True');
-INSERT INTO Employee VALUES('12345','Adam','Adams','Adam2','OleMiss2!','False','False','True');
-INSERT INTO Employee VALUES('12345','Emily','Evans','Emily3','OleMiss3!','True','False','False');
-INSERT INTO Employee VALUES('12345','Everett','Eagle','Everett4','OleMiss4!','True','False','False');
-INSERT INTO Employee VALUES('12345','Elle','Ellens','Elle5','OleMiss5!','True','False','False');
-INSERT INTO Employee VALUES('12345','Eddy','Jackson','Eddy6','OleMiss6!','False','True','False');
-INSERT INTO Employee VALUES('12345','Eric','Materson','Eric7','OleMiss7!','False','True','False');
-INSERT INTO Employee VALUES('12345','Emma','Watson','Emma8','OleMiss8','False','True','False');
+INSERT INTO Employee VALUES('Amy1','OleMiss1!','Amy','Ashley','False','False','True');
+INSERT INTO Employee VALUES('Adam2','OleMiss2!','Adam','Adams','False','False','True');
+INSERT INTO Employee VALUES('Emily3','OleMiss3!','Emily','Evans','True','False','False');
+INSERT INTO Employee VALUES('Everett4','OleMiss4!','Everett','Eagle','True','False','False');
+INSERT INTO Employee VALUES('Elle5','OleMiss5!','Elle','Ellens','True','False','False');
+INSERT INTO Employee VALUES('Eddy6','OleMiss6!','Eddy','Jackson','False','True','False');
+INSERT INTO Employee VALUES('Eric7','OleMiss7!','Eric','Materson','False','True','False');
+INSERT INTO Employee VALUES('Emma8','OleMiss8','Emma','Watson','False','True','False');
 
 
 INSERT INTO Clients VALUES('667-07-0215','Niamh','Perry', 'Hansen', '06-10-1958', '60', 'ACTIVE');
@@ -111,6 +93,110 @@ INSERT INTO Clients VALUES('649-30-7152','Kerry','Day', 'Day', '05-27-1982', '36
 INSERT INTO Clients VALUES('574-68-9407','Andy','Black', 'Velasquez', '07-18-1984', '34', 'SUSPENDED');
 INSERT INTO Clients VALUES('676-22-6949','Kallum','Clarke', 'Bray', '01-23-1988', '30', 'SUSPENDED');
 INSERT INTO Clients VALUES('484-28-2725','Chase','Black', 'Lamb', '03-12-1997', '21', 'ACTIVE');
+
+INSERT INTO Composite VALUES('Amy1','667-07-0215');
+INSERT INTO Composite VALUES('Amy1','001-66-1622');
+INSERT INTO Composite VALUES('Amy1','016-90-0346');
+INSERT INTO Composite VALUES('Amy1','492-21-3648');
+INSERT INTO Composite VALUES('Amy1','422-44-1999');
+INSERT INTO Composite VALUES('Amy1','614-87-0504');
+INSERT INTO Composite VALUES('Amy1','404-14-1154');
+INSERT INTO Composite VALUES('Amy1','041-44-9678');
+INSERT INTO Composite VALUES('Amy1','649-30-7152');
+INSERT INTO Composite VALUES('Amy1','574-68-9407');
+INSERT INTO Composite VALUES('Amy1','676-22-6949');
+INSERT INTO Composite VALUES('Amy1','484-28-2725');
+
+INSERT INTO Composite VALUES('Adam2','667-07-0215');
+INSERT INTO Composite VALUES('Adam2','001-66-1622');
+INSERT INTO Composite VALUES('Adam2','016-90-0346');
+INSERT INTO Composite VALUES('Adam2','492-21-3648');
+INSERT INTO Composite VALUES('Adam2','422-44-1999');
+INSERT INTO Composite VALUES('Adam2','614-87-0504');
+INSERT INTO Composite VALUES('Adam2','404-14-1154');
+INSERT INTO Composite VALUES('Adam2','041-44-9678');
+INSERT INTO Composite VALUES('Adam2','649-30-7152');
+INSERT INTO Composite VALUES('Adam2','574-68-9407');
+INSERT INTO Composite VALUES('Adam2','676-22-6949');
+INSERT INTO Composite VALUES('Adam2','484-28-2725');
+
+INSERT INTO Composite VALUES('Emily3','667-07-0215');
+INSERT INTO Composite VALUES('Emily3','001-66-1622');
+INSERT INTO Composite VALUES('Emily3','016-90-0346');
+INSERT INTO Composite VALUES('Emily3','492-21-3648');
+INSERT INTO Composite VALUES('Emily3','422-44-1999');
+INSERT INTO Composite VALUES('Emily3','614-87-0504');
+INSERT INTO Composite VALUES('Emily3','404-14-1154');
+INSERT INTO Composite VALUES('Emily3','041-44-9678');
+INSERT INTO Composite VALUES('Emily3','649-30-7152');
+INSERT INTO Composite VALUES('Emily3','574-68-9407');
+INSERT INTO Composite VALUES('Emily3','676-22-6949');
+INSERT INTO Composite VALUES('Emily3','484-28-2725');
+
+INSERT INTO Composite VALUES('Everett4','667-07-0215');
+INSERT INTO Composite VALUES('Everett4','001-66-1622');
+INSERT INTO Composite VALUES('Everett4','016-90-0346');
+INSERT INTO Composite VALUES('Everett4','492-21-3648');
+INSERT INTO Composite VALUES('Everett4','422-44-1999');
+INSERT INTO Composite VALUES('Everett4','614-87-0504');
+INSERT INTO Composite VALUES('Everett4','404-14-1154');
+INSERT INTO Composite VALUES('Everett4','041-44-9678');
+INSERT INTO Composite VALUES('Everett4','649-30-7152');
+INSERT INTO Composite VALUES('Everett4','574-68-9407');
+INSERT INTO Composite VALUES('Everett4','676-22-6949');
+INSERT INTO Composite VALUES('Everett4','484-28-2725');
+
+INSERT INTO Composite VALUES('Elle5','667-07-0215');
+INSERT INTO Composite VALUES('Elle5','001-66-1622');
+INSERT INTO Composite VALUES('Elle5','016-90-0346');
+INSERT INTO Composite VALUES('Elle5','492-21-3648');
+INSERT INTO Composite VALUES('Elle5','422-44-1999');
+INSERT INTO Composite VALUES('Elle5','614-87-0504');
+INSERT INTO Composite VALUES('Elle5','404-14-1154');
+INSERT INTO Composite VALUES('Elle5','041-44-9678');
+INSERT INTO Composite VALUES('Elle5','649-30-7152');
+INSERT INTO Composite VALUES('Elle5','574-68-9407');
+INSERT INTO Composite VALUES('Elle5','676-22-6949');
+INSERT INTO Composite VALUES('Elle5','484-28-2725');
+
+INSERT INTO Composite VALUES('Eddy6','667-07-0215');
+INSERT INTO Composite VALUES('Eddy6','001-66-1622');
+INSERT INTO Composite VALUES('Eddy6','016-90-0346');
+INSERT INTO Composite VALUES('Eddy6','492-21-3648');
+INSERT INTO Composite VALUES('Eddy6','422-44-1999');
+INSERT INTO Composite VALUES('Eddy6','614-87-0504');
+INSERT INTO Composite VALUES('Eddy6','404-14-1154');
+INSERT INTO Composite VALUES('Eddy6','041-44-9678');
+INSERT INTO Composite VALUES('Eddy6','649-30-7152');
+INSERT INTO Composite VALUES('Eddy6','574-68-9407');
+INSERT INTO Composite VALUES('Eddy6','676-22-6949');
+INSERT INTO Composite VALUES('Eddy6','484-28-2725');
+
+INSERT INTO Composite VALUES('Eric7','667-07-0215');
+INSERT INTO Composite VALUES('Eric7','001-66-1622');
+INSERT INTO Composite VALUES('Eric7','016-90-0346');
+INSERT INTO Composite VALUES('Eric7','492-21-3648');
+INSERT INTO Composite VALUES('Eric7','422-44-1999');
+INSERT INTO Composite VALUES('Eric7','614-87-0504');
+INSERT INTO Composite VALUES('Eric7','404-14-1154');
+INSERT INTO Composite VALUES('Eric7','041-44-9678');
+INSERT INTO Composite VALUES('Eric7','649-30-7152');
+INSERT INTO Composite VALUES('Eric7','574-68-9407');
+INSERT INTO Composite VALUES('Eric7','676-22-6949');
+INSERT INTO Composite VALUES('Eric7','484-28-2725');
+
+INSERT INTO Composite VALUES('Emma8','667-07-0215');
+INSERT INTO Composite VALUES('Emma8','001-66-1622');
+INSERT INTO Composite VALUES('Emma8','016-90-0346');
+INSERT INTO Composite VALUES('Emma8','492-21-3648');
+INSERT INTO Composite VALUES('Emma8','422-44-1999');
+INSERT INTO Composite VALUES('Emma8','614-87-0504');
+INSERT INTO Composite VALUES('Emma8','404-14-1154');
+INSERT INTO Composite VALUES('Emma8','041-44-9678');
+INSERT INTO Composite VALUES('Emma8','649-30-7152');
+INSERT INTO Composite VALUES('Emma8','574-68-9407');
+INSERT INTO Composite VALUES('Emma8','676-22-6949');
+INSERT INTO Composite VALUES('Emma8','484-28-2725');
 
 
 INSERT INTO Classification VALUES('849612753','F','Asian American','M','TRUE','667-07-0215'); 
