@@ -35,5 +35,10 @@ $cfg['Servers'][$i]['auth_type']     = 'config'; <br />
 $cfg['Servers'][$i]['user']          = '__FILL_IN_DETAILS__'; <br />
 $cfg['Servers'][$i]['password']      = '__FILL_IN_DETAILS__';\ <br />
 
+## Resources:
 ### Helpful for connecting your ubuntu to Apache Server
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+
+### Self-Assigned SSL Cerification
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
+
