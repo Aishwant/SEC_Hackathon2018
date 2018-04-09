@@ -9,7 +9,7 @@
 <nav class='navbar navbar-expand-sm bg-primary navbar-dark'>
   <a class="navbar-brand" href="index.php">
     <img src="logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Ole Miss Cybersecurity Challange
+    Ole Miss Cyber Security Challenge
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,9 +22,17 @@
     </ul>
 
     <span class="navbar-text">
-	<a href="login.php">Login</a>
-	<a href="register.php">Register</a>
-	<a href="logout.php">Logout</a>
+	<?php
+	session_start();
+	IF($_SESSION['ValidUser']){
+		echo $_SESSION['fname']." ".$_SESSION['lname']." | ";
+		echo "<a href='logout.php'>Logout</a>";
+	}
+	else{
+	echo "<a href='login.php'>Login</a> ";
+	echo "<a href='register.php'>Register</a>";
+	}
+	?>
     </span>
   </div>
 </nav>
@@ -34,7 +42,7 @@
 <br />
 <br />
 <h2 align="center">Presentation Slides</h2>
-<p align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSb3YMYy8y1IIAu3x67QwVVCNxJP6hcO4Cj74QyLVNfkfOzMk9jpV_cEWCcZvejFjDZyERY9qvZ3zcL/embed?start=true&loop=false&delayms=30000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT77M-rD7bfLaSGeKe8zxHbtHdzRYo5XPWmd35jwYFPGw5AwJmiq4E3SP-0MD02jLqEWg3G0JUJFLjR/embed?start=false&loop=false&delayms=15000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </p>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

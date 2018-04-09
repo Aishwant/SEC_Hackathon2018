@@ -1,11 +1,12 @@
-<?php include('server.php')?>
+
+
 <!DOCTYPE html>
 <?php
-    if($_SERVER['REQUEST_METHOD'] === 'post'){
-        if(isset($_SERVER['username']) && !isEmpty($_SERVER['username']))
-            echo 'yay';
-        // else
-        //     echo '<h1>Please complete all the fields</h1>';
+    if(isset($_POST['register'])){
+        if(isset($_POST['username']) && !Empty($_POST['username'])&&isset($_POST['email']) && !Empty($_POST['email'])&&isset($_POST['password']) && !Empty($_POST['password'])&&isset($_POST['confirm']) && !Empty($_POST['confirm']))
+            echo '';
+        else
+            echo '<h1>Please complete all the fields</h1>';
     }
 ?>
 <html>
@@ -20,11 +21,11 @@
         <h1>Registration Form</h1>
          <div class="input-group">
          <label for="username">Username:</label>
-         <input type="text" name="username" placeholder="e.g. Molly666">
+         <input type="text" name="username" placeholder="e.g. Molly">
          </div>
          <div class="input-group">
          <label for="email">Email:</label>
-         <input type="text" name="email" placeholder="e.g. Molly666@gmail.com">
+         <input type="text" name="email" placeholder="e.g. Molly@gmail.com">
          </div>
          <div class="input-group">
          <label for="password">Password:</label>

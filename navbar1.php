@@ -4,13 +4,14 @@ Class navb{
 	
 	Public Function Anavbar(){
 		
-		//session_start();
-		//If(!$_SESSION['ValidUser']){
-		//header('Location: index.php');
+		session_start();
+		If(!$_SESSION['Admin']){
+		header('Location: index.php');
+		}
 		echo "<nav class='navbar navbar-expand-sm bg-primary navbar-dark'>
 	  <a class='navbar-brand' href='index.php'>
 		<img src='logo1.jpg' width='30' height='30' class='d-inline-block align-top' alt=''>
-		Ole Miss Cybersecurity Challange
+		Ole Miss Cyber security Challenge
 	  </a>
 	  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation'>
 		<span class='navbar-toggler-icon'></span>
@@ -26,8 +27,8 @@ Class navb{
 			  Manage Employees
 			</a>
 			<div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-			  <a class='dropdown-item' href='#'>Add Employee</a>
-			  <a class='dropdown-item' href='#'>View Employees</a>
+			  <a class='dropdown-item' href='addemp.php'>Add Employee</a>
+			  <a class='dropdown-item' href='empdt.php'>View Employees</a>
 			  <div class='dropdown-divider'></div>
 			</div>
 		  </li>
@@ -44,9 +45,9 @@ Class navb{
 		  </li>
 		</ul>
 		<span class='navbar-text'>";
-		//echo $_SESSION['fname'].' '.$_SESSION['lname'];
-		echo "<a href='login.php'>Login</a>
-		<a href='logout.php'>Logout</a>
+		
+		echo $_SESSION['fname'].' '.$_SESSION['lname']." | ";
+		echo "<a href='logout.php'>Logout</a>
 		</span>
 	  </div>
 	</nav>";
